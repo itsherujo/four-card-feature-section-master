@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;1,600&display=swap');
+
+:root {
+    /* === COLOR PRIMARY === */
+    --red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+
+    /* === NEUTRAL === */
+    --very-dark-blue: hsl(234, 12%, 34%);
+    --grayish-blue: hsl(229, 6%, 66%);
+    --very-light-grey: hsl(0, 0%, 98%);
+}
+
+/* === MOBILE === */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    display: grid;
+    place-items: center;
+    background-color: var(--very-light-grey);
+    color: var(--grayish-blue);
+}
+
+main {
+    padding: 70px 35px;
+}
+
+main .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    text-align: center;
+    place-items: center;
+} 
+
+section.text-only {
+    margin-bottom: 60px;
+    width: 300px;
+}
+
+.text-only h2 {
+    font-weight: 200;
+    padding-bottom: 20px;
+}
+
+.text-only h2 span {
+    font-weight: 600;
+    color: var(--very-dark-blue);
+}
+
+section.content-box {
+    display: grid;
+    grid-template-columns: minmax(300px, 1fr);
+    grid-template-rows: repeat(4, minmax(220px, 1fr));
+    row-gap: 40px;
+}
+
+section .box{
+    background-color: var(--very-light-grey);
+    padding: 25px;
+    box-shadow: 0px 15px 25px rgba(176, 174, 174, 0.5);
+    position: relative;
+    border-radius: 10px;
+}
+
+section .box h3 {
+    font-size: 20px;
+    font-weight: 600;
+    text-align: start;
+    color: var(--very-dark-blue);
+    margin-bottom: 5px;
+}
+
+section .box p {
+    font-weight: 400;
+    font-size: .90em;
+    text-align: start;
+}
+
+section img {
+    width: 4em;
+    position: absolute;
+    right: 30px;
+    bottom: 20px;
+}
+
+section .box.cyan {
+    border-top: 4px solid var(--cyan);
+}
+section .box.red {
+    border-top: 4px solid var(--red);
+}
+section .box.orange {
+    border-top: 4px solid var(--orange);
+}
+section .box.blue {
+    border-top: 4px solid var(--blue);
+}
+
+
+
+@media screen and (min-width: 376px) and (max-width: 768px) {
+    section.text-only {
+        width: 100%;
+    }
+    section.content-box {
+       width: 100%;
+    }
+    
+}
+
+/* === TABLET OR UPPER */
+@media screen and (min-width: 768px) {
+    main .container {
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
+    }
+
+    section.content-box {
+        grid-template-rows: repeat(2, minmax(250px, 1fr));
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+    section.text-only {
+        width: 50%;
+    }
+    
+}
+
+/* DESKTOP */
+@media screen and (min-width: 1024px) {
+    section.content-box {
+        grid-template-rows: repeat(4, minmax(120px, 120px));
+        grid-template-columns: repeat(3, minmax(200px, 400px));
+        /* gap: 10px; */
+    }
+
+    .red {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+    .cyan {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 4;
+    }
+    .blue {
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 4;
+    }
+    .orange {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 5;
+    } 
+
+}
