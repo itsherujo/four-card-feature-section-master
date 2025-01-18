@@ -27,8 +27,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/four-card-feature-8C1WaF0NhJ](https://www.frontendmentor.io/solutions/four-card-feature-8C1WaF0NhJ)
+- Live Site URL: [https://four-cards-feature-byjo.netlify.app/](https://four-cards-feature-byjo.netlify.app/)
 
 ## My process
 
